@@ -5,19 +5,24 @@ import random
 # ---------- Exercice 1 ----------
 
 # Génération des données
-n = 10000
-# n = 1000     # diminution du nombre d'échantillons observés
+# n = 10000
+n = 1000     # diminution du nombre d'échantillons observés
 # n = 100000   # augmentation du nombre d'échantillons observés
 x = np.linspace(0,1,n)
 y = []
 y2 = []
+y3 = []
 
 # Génération d'epsilon et du vecteur y
 for i in range(n):
     eps = random.uniform(-1,1)
+    eps3 = np.random.normal(0, 1) # loi normale
     yi = 10 + 2*x[i] + eps
-    y2 = 10 + 2*(x[i]**2) + eps # modèle non-linéaire
+    y2i = 10 + 2*(x[i]**2) + eps # modèle non-linéaire
+    y3i = 10 + 2*x[i] + eps3 
     y.append(yi)
+    y2.append(y2i)
+    y3.append(y3i)
 
 # Tracé
 plt.plot(x, y)
@@ -47,13 +52,13 @@ for i in range(1,n):
     Cxy2 += np.dot((x[i] - x_moy),(y2[i] - y2_moy))
 sigma2_x = (1/n)*sigma2_x
 Cxy = (1/n)*Cxy
-C2xy = (1/n)*C2xy
+Cxy2 = (1/n)*Cxy2
 
 # Calcul de beta1 et beta2
 beta2 = Cxy / sigma2_x
-beta2_2 = Cxy / sigma2_x
+beta2_2 = Cxy2 / sigma2_x
 beta1 = y_moy - beta2*x_moy
-beta1_2 = y_moy - beta2*x_moy
+beta1_2 = y2_moy - beta2_2*x_moy
 
 # Affichage de la variance, de la covariance, de beta1 et de beta2
 print('sigma carré de x : ', sigma2_x)
@@ -81,8 +86,8 @@ print('Valeur prédite pour x = 0   : ',beta1_2 + beta2_2*0)
 
 # ---------- Exercice 3 ----------
 
-beta2_3_estimates = []
-beta1_3_estimates = []
+# beta2_3_estimates = []
+# beta1_3_estimates = []
 
 # for _ in range(n):
 #     y = []
@@ -95,13 +100,18 @@ beta1_3_estimates = []
 #     beta2_3 = np.cov(x, y, ddof=0)[0, 1] / np.var(x, ddof=0)
 #     beta2_3_estimates.append(beta2_3)
 
-y_3 = []
+Liste_beta2 = []
 
-# Génération d'epsilon et du vecteur y
-for i in range(n):
-    eps_3 = np.random.normal(0, 1)
-    y_3i = 10 + 2*x[i] + eps
-    y_3.append(y_3i)
+for i in range(1000):
+    
+    beta2i = Cxy / sigma2_x
+
+# Histogramme
+plt.hist(Liste_beta2, range = (1,3), bins = 100, color = 'yellow',
+         edgecolor = 'red')
+plt.xlabel('beta2')
+plt.ylabel('nombre occurences')
+plt.title('histogramme beta2')
 
 # plot the results
 plt.figure(figsize=(10, 8))

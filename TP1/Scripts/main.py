@@ -100,6 +100,7 @@ print('Valeur prédite pour x = 0   : ',beta1_2 + beta2_2*0)
 #     beta2_3 = np.cov(x, y, ddof=0)[0, 1] / np.var(x, ddof=0)
 #     beta2_3_estimates.append(beta2_3)
 
+# Construction de la liste des beta2 pour l'histogramme
 Liste_beta2 = []
 
 for i in range(1000):

@@ -26,8 +26,8 @@ y2 = y_exo2(n, x, eps_aleatoire(n))
 beta2_nl = beta2(variance(x,n), covariance(x,y2, n))
 beta1_nl = beta1(x,y2,beta2_nl)
 
-#model(x,y1, beta1_l  + beta2_l * x, 'Données observées pour une distribution aléatoire du bruit + modèle linéaire', 'b.', 'r.', 'x', 'y')
-#model(x,y2, beta1_nl + beta2_nl*(x**2), 'Données observées pour une distribution aléatoire du bruit + modèle non-linéaire', 'b.', 'r.', 'x', 'y')
+model(x,y1, beta1_l  + beta2_l * x, 'Données observées pour une distribution aléatoire du bruit + modèle linéaire', 'b.', 'r.', 'x', 'y')
+model(x,y2, beta1_nl + beta2_nl*(x**2), 'Données observées pour une distribution aléatoire du bruit + modèle non-linéaire', 'b.', 'r.', 'x', 'y')
 
 # Valeurs prédites pour x = 1/2, x = 0 et x = 1
 print('Valeur prédite pour x = 1/2 : ',beta1_l + beta2_l*(1/2))
@@ -69,12 +69,6 @@ plt.ylabel('Nombre d\'occurences')
 plt.title('Histogramme de beta2')
 plt.show()
 
-"""
- l'utilisation d'un histogramme pour évaluer β2 permet d'obtenir des informations 
- sur la distribution, le biais, la précision et la détection des valeurs aberrantes 
- dans les estimations. Cela facilite l'analyse et l'évaluation des performances de 
- l'estimation de β2.
-"""
 
 # ---------- Exercice 4 ----------
 
@@ -91,15 +85,3 @@ model(x, y4, beta1_4 + beta2_4*x, 'Données observées pour une distribution al�
 
 print("m_TP1 : ", beta1_4,beta2_4)
 
-fichier = open('../../TP3/Scripts/doc_comparaison.txt')
-fichier.write("beta2_4 : ", beta2_4, "\n")
-fichier.write("beta1_4 : ", beta1_4, "\n")
-
-fichier.close()
-
-""""
-l'ajout d'outliers dans les données est une technique utile pour évaluer la robustesse des méthodes, 
-étudier l'influence des valeurs extrêmes, tester la résilience des modèles et fournir des visualisations 
-illustratives des effets des outliers. Cela permet d'obtenir une meilleure compréhension des données et de 
-s'assurer de la fiabilité des analyses et des estimations.
-"""

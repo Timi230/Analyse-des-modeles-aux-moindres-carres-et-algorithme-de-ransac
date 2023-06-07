@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>library_TP2 API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>library_TP2</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+# from scipy import optimize
+import matplotlib.pyplot as plt
+import random
+
+
+def y_exo1(n, x, eps):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x + 8*x^2 + eps
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;   
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] + 8*(x[i]**2) + eps[i] # modèle linéaire
+        y.append(yi)
+    return y
+
+def y_exo1_sin(n, x, eps):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x + 8*x^2 + 10*sin(pi*x) + eps
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] + 8*(x[i]**2) + 10*np.sin(np.pi*x[i]) + eps[i] # modèle linéaire
+        y.append(yi)
+    return y
+
+def y_exo3(n, x):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x 
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] 
+        y.append(yi)
+    return y
+
+def eps_aleatoire(n):
+    &#34;&#34;&#34; Cette fonction permet de générer le bruit de façon aléatoire de -1 à 1
+
+    Args:
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        list: valeur des epsilon
+    &#34;&#34;&#34;    
+
+    liste_eps = []
+    for i in range(n):
+        eps = random.uniform(-1,1)
+        liste_eps.append(eps)
+    return liste_eps
+
+
+def esp_aleatoire_gaussian(n, mu, sigma):
+    &#34;&#34;&#34; Cette fonction permet de générer le bruit de façon aléatoire avec un 
+        espilon définit aléatoire gaussienne centrée avec une variance unitaire
+
+    Args:
+        n (int): nombre d échantillons observés 
+        mu (int): moyenne pour centrer la distribution
+        sigma (int): la variance
+
+    Returns:
+        list: valeur des epsilon
+    &#34;&#34;&#34;    
+
+    liste_eps = []
+    for i in range(n):
+        liste_eps.append(np.random.normal(mu,sigma))
+    
+    return liste_eps
+
+def variance(x,n):
+    &#34;&#34;&#34;Calcul de la variance d&#39;une variable
+
+    Args:
+        x (list): varibale de calcul 
+        n (int): nombre d&#39;échantillons observés 
+
+    Returns:
+        float: valeur de la variance de notre variable x
+    &#34;&#34;&#34;    
+
+    sigma2_x = 0
+    for i in range(1,n):
+        sigma2_x += (x[i] - np.mean(x))**2
+    return (1/n)*sigma2_x
+
+def covariance(x, y, n):
+    &#34;&#34;&#34;Calcul de la covariance entre deux variables
+
+    Args:
+        x (list): première variable de calcul
+        y (list): deuxième variable de calcul
+        n (int): nombre d&#39;échantillons observés 
+
+    Returns:
+        float: valeur de la covariance entre les deux variables
+    &#34;&#34;&#34;    
+
+    Cxy = 0
+    for i in range(1,n):
+        Cxy += np.dot((x[i] - np.mean(x)),(y[i] - np.mean(y)))
+    Cxy = (1/n)*Cxy
+    return Cxy
+
+def traces(x, y, title, color, label_x, label_y):
+    &#34;&#34;&#34;Permet de représenter les donées générés sous forme d&#39;un nuage de points
+
+    Args:
+        x (NDArray[floating[Any]]): valeurs de x (axes des ordonnées)
+        y (list): valeurs de y (axes des abscices)
+        title (string): titre de la figure
+        color (string): couleurs des points des données 
+        label_x (string): label de l axe des ordonées
+        label_y (string): label de l axe des absices
+
+    Returns:
+        Any: 
+    &#34;&#34;&#34;    
+
+    plt.figure(figsize = (10,8))
+    plt.plot(x, y, color)
+    plt.xlabel(label_x)
+    plt.ylabel(label_y)
+    plt.title(title)
+    return plt.show()
+
+def model(x, y, y_model, title, color, color_model, label_x, label_y):
+    &#34;&#34;&#34;Permet de représenter les donées générés sous forme d&#39;un nuage de points et 
+        de superposer une représentation de notre modèle
+
+    Args:
+        x (NDArray[floating[Any]]): valeurs de x (axes des ordonnées)
+        y (list): valeurs de y (axes des abscices)
+        y_model (list): valeurs de y de notre modèle
+        title (_type_): titre de la figure
+        color (_type_): couleur des points des données générer
+        color_model (_type_): couleur des points du modèle
+        label_x (_type_): label de l axe des ordonées
+        label_y (_type_): label de l axe des absices
+
+    Returns:
+        Any: 
+    &#34;&#34;&#34;    
+
+    plt.figure(figsize = (10,8))
+    plt.plot(x, y, color)
+    plt.plot(x,y_model, color_model)
+    plt.xlabel(label_x)
+    plt.ylabel(label_y)
+    plt.title(title)
+    return plt.show()
+
+
+def outliers(y, n, n_outliers, mu, sigma):
+    &#34;&#34;&#34;Permet de géngérer des outiliers, des valeurs qui sont très éloignées de la masse 
+        de points générés
+
+    Args:
+        y (list): valeur de y
+        n (int): nombre d échantillons observés 
+        n_outliers (int): nombre de outliers générés
+        min (int): valeur minimal de du choix aléatoire de la valeur du outliers
+        max (int): valeur maximal de du choix aléatoire de la valeur du outliers
+
+    Returns:
+        list: y avec les outliers
+    &#34;&#34;&#34;    
+    for o in range(n_outliers):
+        i_random = random.randint(0,n-1)
+        y[i_random] = np.random.normal(mu,sigma)
+
+    return y
+
+
+def mat_X_exo1(x, n):
+    &#34;&#34;&#34;Calcul la matrice X de l&#39;ex 1
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice X 
+    &#34;&#34;&#34;
+    X = np.ones((n,3))
+    for i in range(n):
+        X[i,1] = x[i]
+        X[i,2] = x[i]**2 
+    return X
+
+def mat_Y_exo1(y, n):
+    &#34;&#34;&#34;Calcul la matrice Y de l&#39;ex 1
+
+    Args:
+        y (list): valeur de y
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice colone Y
+    &#34;&#34;&#34;
+    Y = np.ones((n,1))
+    for i in range(n):
+        Y[i] = y[i]
+    return Y
+
+def mat_X_sin(x, n):
+    &#34;&#34;&#34;Calcul la matrice X de l&#39;ex 1 pour le modèle non-linéaire
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice X pour le modèle non-linéaire
+    &#34;&#34;&#34;
+    X_sin = np.ones((n,4))
+    for i in range(n):
+        X_sin[i,1] = x[i]
+        X_sin[i,2] = x[i]**2 
+        X_sin[i,3] = np.sin(np.pi*x[i])
+    return X_sin
+
+def beta2(var, cov):
+    &#34;&#34;&#34;Calcul du coéficient beta2 à partir le variance et de la covariance 
+
+    Args:
+        var (float): variance
+        cov (float): covariance
+
+    Returns:
+        float: beta2
+    &#34;&#34;&#34;    
+    return cov / var
+
+def beta1(x, y, beta2):
+    &#34;&#34;&#34;Calcul du coéficient beta1 à partir de x, y et de beta2
+
+    Args:
+        x (list): première variable de calcul
+        y (list): deuxième variable de calcul
+        beta2 (float): valeur de beta2
+
+    Returns:
+        float: beta1
+    &#34;&#34;&#34;
+    return np.mean(y) - beta2*np.mean(x)
+
+
+def calcul_beta(X, Y):
+    &#34;&#34;&#34;Génération de la matrice beta en fonction de X et Y
+
+    Args:
+        X (NDArray[float64]): Matrice X
+        Y (NDArray[float64]): Matrice Y
+
+    Returns:
+        NDArray[float64]: Matrice de beta
+    &#34;&#34;&#34;
+    return np.dot(np.dot(np.linalg.inv(np.dot(X.T,X)),X.T),Y)
+
+def calcul_model(x, n):
+    &#34;&#34;&#34; Estimation des beta_1 et beta_2
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        list: liste contenant beta_1 et beta_2
+    &#34;&#34;&#34;
+    eps = eps_aleatoire(n)
+
+    y_m = y_exo3(n, x)
+
+    beta2_m = beta2(variance(x,n),covariance(x,y_m,n))
+    beta1_m = beta1(x, y_m, beta2_m)
+
+    m = [beta1_m,beta2_m]
+
+    return m
+
+def inliers(m1,m2, Treshold, n, x, y):
+    &#34;&#34;&#34;Cette fonction compare deux modèles et nous indique lequel est le meilleur 
+
+    Args:
+        m1 (list): premier modèle
+        m2 (list): premier modèle
+        Treshold (int): _description_
+        n (int): nombre d échantillons observés 
+        x (list) : valeurs de x
+        y (list) : valeurs de y
+
+    Returns:
+        list: renvoie le meilleur modèle
+    &#34;&#34;&#34;
+
+    for _ in range(10):
+
+        beta1_m1 = m1[0]
+        beta2_m1 = m1[1]
+        beta1_m2 = m2[0]
+        beta2_m2 = m2[1]
+
+        n_m1 = 0
+        n_m2 = 0
+
+        for i in range(n):
+            if abs(beta1_m1*x[i] + beta2_m1 - y[i]) &lt; Treshold:
+                n_m1 += 1
+            
+            if abs(beta1_m2*x[i] + beta2_m2 - y[i]) &lt; Treshold:
+                n_m2 += 1
+
+        if n_m1 &gt;= n_m2:
+            m2 = calcul_model(x, n)
+            best_model = m1
+            
+        else:
+            m1 = calcul_model(n)
+            best_model = m2
+
+    return best_model
+
+def compare(m1,m2, Treshold, n,x, y):
+    &#34;&#34;&#34;Cette fonction compare 10 fois les deux modèles et nous indique lequel est le meilleur 
+
+    Args:
+        m1 (list): premier modèle
+        m2 (list): premier modèle
+        Treshold (int): _description_
+        n (int): nombre d échantillons observés 
+        x (list) : valeurs de x
+        y (list) : valeurs de y
+
+    Returns:
+        string: renvoie le nom du meilleur modèle
+    &#34;&#34;&#34;
+
+    beta1_m1 = m1[0]
+    beta2_m1 = m1[1]
+    beta1_m2 = m2[0]
+    beta2_m2 = m2[1]
+
+    n_m1 = 0
+    n_m2 = 0
+
+    for i in range(n):
+        if abs(beta1_m1 + beta2_m1*x[i] - y[i]) &lt; Treshold:
+            n_m1 += 1
+
+        if abs(beta1_m2 + beta2_m2*x[i] - y[i]) &lt; Treshold:
+            n_m2 += 1
+
+    if n_m1 &gt;= n_m2:
+        m2 = calcul_model(x, n)
+        return &#34;TP1&#34;
+            
+    else:
+        m1 = calcul_model(x, n)
+        return &#34;TP2&#34;</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="library_TP2.beta1"><code class="name flex">
+<span>def <span class="ident">beta1</span></span>(<span>x, y, beta2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul du coéficient beta1 à partir de x, y et de beta2</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>première variable de calcul</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>deuxième variable de calcul</dd>
+<dt><strong><code>beta2</code></strong> :&ensp;<code>float</code></dt>
+<dd>valeur de beta2</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>beta1</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def beta1(x, y, beta2):
+    &#34;&#34;&#34;Calcul du coéficient beta1 à partir de x, y et de beta2
+
+    Args:
+        x (list): première variable de calcul
+        y (list): deuxième variable de calcul
+        beta2 (float): valeur de beta2
+
+    Returns:
+        float: beta1
+    &#34;&#34;&#34;
+    return np.mean(y) - beta2*np.mean(x)</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.beta2"><code class="name flex">
+<span>def <span class="ident">beta2</span></span>(<span>var, cov)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul du coéficient beta2 à partir le variance et de la covariance </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>var</code></strong> :&ensp;<code>float</code></dt>
+<dd>variance</dd>
+<dt><strong><code>cov</code></strong> :&ensp;<code>float</code></dt>
+<dd>covariance</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>beta2</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def beta2(var, cov):
+    &#34;&#34;&#34;Calcul du coéficient beta2 à partir le variance et de la covariance 
+
+    Args:
+        var (float): variance
+        cov (float): covariance
+
+    Returns:
+        float: beta2
+    &#34;&#34;&#34;    
+    return cov / var</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.calcul_beta"><code class="name flex">
+<span>def <span class="ident">calcul_beta</span></span>(<span>X, Y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génération de la matrice beta en fonction de X et Y</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>X</code></strong> :&ensp;<code>NDArray[float64]</code></dt>
+<dd>Matrice X</dd>
+<dt><strong><code>Y</code></strong> :&ensp;<code>NDArray[float64]</code></dt>
+<dd>Matrice Y</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>NDArray[float64]</code></dt>
+<dd>Matrice de beta</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calcul_beta(X, Y):
+    &#34;&#34;&#34;Génération de la matrice beta en fonction de X et Y
+
+    Args:
+        X (NDArray[float64]): Matrice X
+        Y (NDArray[float64]): Matrice Y
+
+    Returns:
+        NDArray[float64]: Matrice de beta
+    &#34;&#34;&#34;
+    return np.dot(np.dot(np.linalg.inv(np.dot(X.T,X)),X.T),Y)</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.calcul_model"><code class="name flex">
+<span>def <span class="ident">calcul_model</span></span>(<span>x, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Estimation des beta_1 et beta_2</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeur de x</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>liste contenant beta_1 et beta_2</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calcul_model(x, n):
+    &#34;&#34;&#34; Estimation des beta_1 et beta_2
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        list: liste contenant beta_1 et beta_2
+    &#34;&#34;&#34;
+    eps = eps_aleatoire(n)
+
+    y_m = y_exo3(n, x)
+
+    beta2_m = beta2(variance(x,n),covariance(x,y_m,n))
+    beta1_m = beta1(x, y_m, beta2_m)
+
+    m = [beta1_m,beta2_m]
+
+    return m</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.compare"><code class="name flex">
+<span>def <span class="ident">compare</span></span>(<span>m1, m2, Treshold, n, x, y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cette fonction compare 10 fois les deux modèles et nous indique lequel est le meilleur </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>m1</code></strong> :&ensp;<code>list</code></dt>
+<dd>premier modèle</dd>
+<dt><strong><code>m2</code></strong> :&ensp;<code>list</code></dt>
+<dd>premier modèle</dd>
+<dt><strong><code>Treshold</code></strong> :&ensp;<code>int</code></dt>
+<dd><em>description</em></dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<p>x (list) : valeurs de x
+y (list) : valeurs de y</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>string</code></dt>
+<dd>renvoie le nom du meilleur modèle</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compare(m1,m2, Treshold, n,x, y):
+    &#34;&#34;&#34;Cette fonction compare 10 fois les deux modèles et nous indique lequel est le meilleur 
+
+    Args:
+        m1 (list): premier modèle
+        m2 (list): premier modèle
+        Treshold (int): _description_
+        n (int): nombre d échantillons observés 
+        x (list) : valeurs de x
+        y (list) : valeurs de y
+
+    Returns:
+        string: renvoie le nom du meilleur modèle
+    &#34;&#34;&#34;
+
+    beta1_m1 = m1[0]
+    beta2_m1 = m1[1]
+    beta1_m2 = m2[0]
+    beta2_m2 = m2[1]
+
+    n_m1 = 0
+    n_m2 = 0
+
+    for i in range(n):
+        if abs(beta1_m1 + beta2_m1*x[i] - y[i]) &lt; Treshold:
+            n_m1 += 1
+
+        if abs(beta1_m2 + beta2_m2*x[i] - y[i]) &lt; Treshold:
+            n_m2 += 1
+
+    if n_m1 &gt;= n_m2:
+        m2 = calcul_model(x, n)
+        return &#34;TP1&#34;
+            
+    else:
+        m1 = calcul_model(x, n)
+        return &#34;TP2&#34;</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.covariance"><code class="name flex">
+<span>def <span class="ident">covariance</span></span>(<span>x, y, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul de la covariance entre deux variables</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>première variable de calcul</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>deuxième variable de calcul</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d'échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>valeur de la covariance entre les deux variables</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def covariance(x, y, n):
+    &#34;&#34;&#34;Calcul de la covariance entre deux variables
+
+    Args:
+        x (list): première variable de calcul
+        y (list): deuxième variable de calcul
+        n (int): nombre d&#39;échantillons observés 
+
+    Returns:
+        float: valeur de la covariance entre les deux variables
+    &#34;&#34;&#34;    
+
+    Cxy = 0
+    for i in range(1,n):
+        Cxy += np.dot((x[i] - np.mean(x)),(y[i] - np.mean(y)))
+    Cxy = (1/n)*Cxy
+    return Cxy</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.eps_aleatoire"><code class="name flex">
+<span>def <span class="ident">eps_aleatoire</span></span>(<span>n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cette fonction permet de générer le bruit de façon aléatoire de -1 à 1</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>valeur des epsilon</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def eps_aleatoire(n):
+    &#34;&#34;&#34; Cette fonction permet de générer le bruit de façon aléatoire de -1 à 1
+
+    Args:
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        list: valeur des epsilon
+    &#34;&#34;&#34;    
+
+    liste_eps = []
+    for i in range(n):
+        eps = random.uniform(-1,1)
+        liste_eps.append(eps)
+    return liste_eps</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.esp_aleatoire_gaussian"><code class="name flex">
+<span>def <span class="ident">esp_aleatoire_gaussian</span></span>(<span>n, mu, sigma)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cette fonction permet de générer le bruit de façon aléatoire avec un
+espilon définit aléatoire gaussienne centrée avec une variance unitaire</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>int</code></dt>
+<dd>moyenne pour centrer la distribution</dd>
+<dt><strong><code>sigma</code></strong> :&ensp;<code>int</code></dt>
+<dd>la variance</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>valeur des epsilon</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def esp_aleatoire_gaussian(n, mu, sigma):
+    &#34;&#34;&#34; Cette fonction permet de générer le bruit de façon aléatoire avec un 
+        espilon définit aléatoire gaussienne centrée avec une variance unitaire
+
+    Args:
+        n (int): nombre d échantillons observés 
+        mu (int): moyenne pour centrer la distribution
+        sigma (int): la variance
+
+    Returns:
+        list: valeur des epsilon
+    &#34;&#34;&#34;    
+
+    liste_eps = []
+    for i in range(n):
+        liste_eps.append(np.random.normal(mu,sigma))
+    
+    return liste_eps</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.inliers"><code class="name flex">
+<span>def <span class="ident">inliers</span></span>(<span>m1, m2, Treshold, n, x, y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cette fonction compare deux modèles et nous indique lequel est le meilleur </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>m1</code></strong> :&ensp;<code>list</code></dt>
+<dd>premier modèle</dd>
+<dt><strong><code>m2</code></strong> :&ensp;<code>list</code></dt>
+<dd>premier modèle</dd>
+<dt><strong><code>Treshold</code></strong> :&ensp;<code>int</code></dt>
+<dd><em>description</em></dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<p>x (list) : valeurs de x
+y (list) : valeurs de y</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>renvoie le meilleur modèle</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def inliers(m1,m2, Treshold, n, x, y):
+    &#34;&#34;&#34;Cette fonction compare deux modèles et nous indique lequel est le meilleur 
+
+    Args:
+        m1 (list): premier modèle
+        m2 (list): premier modèle
+        Treshold (int): _description_
+        n (int): nombre d échantillons observés 
+        x (list) : valeurs de x
+        y (list) : valeurs de y
+
+    Returns:
+        list: renvoie le meilleur modèle
+    &#34;&#34;&#34;
+
+    for _ in range(10):
+
+        beta1_m1 = m1[0]
+        beta2_m1 = m1[1]
+        beta1_m2 = m2[0]
+        beta2_m2 = m2[1]
+
+        n_m1 = 0
+        n_m2 = 0
+
+        for i in range(n):
+            if abs(beta1_m1*x[i] + beta2_m1 - y[i]) &lt; Treshold:
+                n_m1 += 1
+            
+            if abs(beta1_m2*x[i] + beta2_m2 - y[i]) &lt; Treshold:
+                n_m2 += 1
+
+        if n_m1 &gt;= n_m2:
+            m2 = calcul_model(x, n)
+            best_model = m1
+            
+        else:
+            m1 = calcul_model(n)
+            best_model = m2
+
+    return best_model</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.mat_X_exo1"><code class="name flex">
+<span>def <span class="ident">mat_X_exo1</span></span>(<span>x, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul la matrice X de l'ex 1</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeur de x</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>NDArray[float64]</code></dt>
+<dd>matrice X</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mat_X_exo1(x, n):
+    &#34;&#34;&#34;Calcul la matrice X de l&#39;ex 1
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice X 
+    &#34;&#34;&#34;
+    X = np.ones((n,3))
+    for i in range(n):
+        X[i,1] = x[i]
+        X[i,2] = x[i]**2 
+    return X</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.mat_X_sin"><code class="name flex">
+<span>def <span class="ident">mat_X_sin</span></span>(<span>x, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul la matrice X de l'ex 1 pour le modèle non-linéaire</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeur de x</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>NDArray[float64]</code></dt>
+<dd>matrice X pour le modèle non-linéaire</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mat_X_sin(x, n):
+    &#34;&#34;&#34;Calcul la matrice X de l&#39;ex 1 pour le modèle non-linéaire
+
+    Args:
+        x (list): valeur de x
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice X pour le modèle non-linéaire
+    &#34;&#34;&#34;
+    X_sin = np.ones((n,4))
+    for i in range(n):
+        X_sin[i,1] = x[i]
+        X_sin[i,2] = x[i]**2 
+        X_sin[i,3] = np.sin(np.pi*x[i])
+    return X_sin</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.mat_Y_exo1"><code class="name flex">
+<span>def <span class="ident">mat_Y_exo1</span></span>(<span>y, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul la matrice Y de l'ex 1</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeur de y</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>NDArray[float64]</code></dt>
+<dd>matrice colone Y</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def mat_Y_exo1(y, n):
+    &#34;&#34;&#34;Calcul la matrice Y de l&#39;ex 1
+
+    Args:
+        y (list): valeur de y
+        n (int): nombre d échantillons observés 
+
+    Returns:
+        NDArray[float64]: matrice colone Y
+    &#34;&#34;&#34;
+    Y = np.ones((n,1))
+    for i in range(n):
+        Y[i] = y[i]
+    return Y</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.model"><code class="name flex">
+<span>def <span class="ident">model</span></span>(<span>x, y, y_model, title, color, color_model, label_x, label_y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de représenter les donées générés sous forme d'un nuage de points et
+de superposer une représentation de notre modèle</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>NDArray[floating[Any]]</code></dt>
+<dd>valeurs de x (axes des ordonnées)</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeurs de y (axes des abscices)</dd>
+<dt><strong><code>y_model</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeurs de y de notre modèle</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>titre de la figure</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>couleur des points des données générer</dd>
+<dt><strong><code>color_model</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>couleur des points du modèle</dd>
+<dt><strong><code>label_x</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>label de l axe des ordonées</dd>
+<dt><strong><code>label_y</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>label de l axe des absices</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Any:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def model(x, y, y_model, title, color, color_model, label_x, label_y):
+    &#34;&#34;&#34;Permet de représenter les donées générés sous forme d&#39;un nuage de points et 
+        de superposer une représentation de notre modèle
+
+    Args:
+        x (NDArray[floating[Any]]): valeurs de x (axes des ordonnées)
+        y (list): valeurs de y (axes des abscices)
+        y_model (list): valeurs de y de notre modèle
+        title (_type_): titre de la figure
+        color (_type_): couleur des points des données générer
+        color_model (_type_): couleur des points du modèle
+        label_x (_type_): label de l axe des ordonées
+        label_y (_type_): label de l axe des absices
+
+    Returns:
+        Any: 
+    &#34;&#34;&#34;    
+
+    plt.figure(figsize = (10,8))
+    plt.plot(x, y, color)
+    plt.plot(x,y_model, color_model)
+    plt.xlabel(label_x)
+    plt.ylabel(label_y)
+    plt.title(title)
+    return plt.show()</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.outliers"><code class="name flex">
+<span>def <span class="ident">outliers</span></span>(<span>y, n, n_outliers, mu, sigma)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de géngérer des outiliers, des valeurs qui sont très éloignées de la masse
+de points générés</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeur de y</dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés </dd>
+<dt><strong><code>n_outliers</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre de outliers générés</dd>
+<dt><strong><code>min</code></strong> :&ensp;<code>int</code></dt>
+<dd>valeur minimal de du choix aléatoire de la valeur du outliers</dd>
+<dt><strong><code>max</code></strong> :&ensp;<code>int</code></dt>
+<dd>valeur maximal de du choix aléatoire de la valeur du outliers</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>y avec les outliers</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def outliers(y, n, n_outliers, mu, sigma):
+    &#34;&#34;&#34;Permet de géngérer des outiliers, des valeurs qui sont très éloignées de la masse 
+        de points générés
+
+    Args:
+        y (list): valeur de y
+        n (int): nombre d échantillons observés 
+        n_outliers (int): nombre de outliers générés
+        min (int): valeur minimal de du choix aléatoire de la valeur du outliers
+        max (int): valeur maximal de du choix aléatoire de la valeur du outliers
+
+    Returns:
+        list: y avec les outliers
+    &#34;&#34;&#34;    
+    for o in range(n_outliers):
+        i_random = random.randint(0,n-1)
+        y[i_random] = np.random.normal(mu,sigma)
+
+    return y</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.traces"><code class="name flex">
+<span>def <span class="ident">traces</span></span>(<span>x, y, title, color, label_x, label_y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de représenter les donées générés sous forme d'un nuage de points</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>NDArray[floating[Any]]</code></dt>
+<dd>valeurs de x (axes des ordonnées)</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>list</code></dt>
+<dd>valeurs de y (axes des abscices)</dd>
+<dt><strong><code>title</code></strong> :&ensp;<code>string</code></dt>
+<dd>titre de la figure</dd>
+<dt><strong><code>color</code></strong> :&ensp;<code>string</code></dt>
+<dd>couleurs des points des données </dd>
+<dt><strong><code>label_x</code></strong> :&ensp;<code>string</code></dt>
+<dd>label de l axe des ordonées</dd>
+<dt><strong><code>label_y</code></strong> :&ensp;<code>string</code></dt>
+<dd>label de l axe des absices</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Any:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def traces(x, y, title, color, label_x, label_y):
+    &#34;&#34;&#34;Permet de représenter les donées générés sous forme d&#39;un nuage de points
+
+    Args:
+        x (NDArray[floating[Any]]): valeurs de x (axes des ordonnées)
+        y (list): valeurs de y (axes des abscices)
+        title (string): titre de la figure
+        color (string): couleurs des points des données 
+        label_x (string): label de l axe des ordonées
+        label_y (string): label de l axe des absices
+
+    Returns:
+        Any: 
+    &#34;&#34;&#34;    
+
+    plt.figure(figsize = (10,8))
+    plt.plot(x, y, color)
+    plt.xlabel(label_x)
+    plt.ylabel(label_y)
+    plt.title(title)
+    return plt.show()</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.variance"><code class="name flex">
+<span>def <span class="ident">variance</span></span>(<span>x, n)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcul de la variance d'une variable</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>x</code></strong> :&ensp;<code>list</code></dt>
+<dd>varibale de calcul </dd>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d'échantillons observés </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>valeur de la variance de notre variable x</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def variance(x,n):
+    &#34;&#34;&#34;Calcul de la variance d&#39;une variable
+
+    Args:
+        x (list): varibale de calcul 
+        n (int): nombre d&#39;échantillons observés 
+
+    Returns:
+        float: valeur de la variance de notre variable x
+    &#34;&#34;&#34;    
+
+    sigma2_x = 0
+    for i in range(1,n):
+        sigma2_x += (x[i] - np.mean(x))**2
+    return (1/n)*sigma2_x</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.y_exo1"><code class="name flex">
+<span>def <span class="ident">y_exo1</span></span>(<span>n, x, eps)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de faire le calule de y dans l'exercice 1 et 3 avec :
+y = 10 + 2<em>x + 8</em>x^2 + eps</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>NDArray[floating[Any]]</code></dt>
+<dd>l espace d'étude</dd>
+<dt><strong><code>eps</code></strong> :&ensp;<code>list</code></dt>
+<dd>liste des valeurs du bruits </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>valeur de y</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def y_exo1(n, x, eps):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x + 8*x^2 + eps
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;   
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] + 8*(x[i]**2) + eps[i] # modèle linéaire
+        y.append(yi)
+    return y</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.y_exo1_sin"><code class="name flex">
+<span>def <span class="ident">y_exo1_sin</span></span>(<span>n, x, eps)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de faire le calule de y dans l'exercice 1 et 3 avec :
+y = 10 + 2<em>x + 8</em>x^2 + 10<em>sin(pi</em>x) + eps</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>NDArray[floating[Any]]</code></dt>
+<dd>l espace d'étude</dd>
+<dt><strong><code>eps</code></strong> :&ensp;<code>list</code></dt>
+<dd>liste des valeurs du bruits </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>valeur de y</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def y_exo1_sin(n, x, eps):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x + 8*x^2 + 10*sin(pi*x) + eps
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] + 8*(x[i]**2) + 10*np.sin(np.pi*x[i]) + eps[i] # modèle linéaire
+        y.append(yi)
+    return y</code></pre>
+</details>
+</dd>
+<dt id="library_TP2.y_exo3"><code class="name flex">
+<span>def <span class="ident">y_exo3</span></span>(<span>n, x)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Permet de faire le calule de y dans l'exercice 1 et 3 avec :
+y = 10 + 2*x </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>n</code></strong> :&ensp;<code>int</code></dt>
+<dd>nombre d échantillons observés</dd>
+<dt><strong><code>x</code></strong> :&ensp;<code>NDArray[floating[Any]]</code></dt>
+<dd>l espace d'étude</dd>
+<dt><strong><code>eps</code></strong> :&ensp;<code>list</code></dt>
+<dd>liste des valeurs du bruits </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>valeur de y</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def y_exo3(n, x):
+    &#34;&#34;&#34;Permet de faire le calule de y dans l&#39;exercice 1 et 3 avec : 
+            y = 10 + 2*x 
+
+    Args:
+        n (int): nombre d échantillons observés
+        x (NDArray[floating[Any]]): l espace d&#39;étude
+        eps (list): liste des valeurs du bruits 
+
+    Returns:
+        list: valeur de y
+    &#34;&#34;&#34;
+    y = []
+    for i in range(n):
+        yi = 10 + 2*x[i] 
+        y.append(yi)
+    return y</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="library_TP2.beta1" href="#library_TP2.beta1">beta1</a></code></li>
+<li><code><a title="library_TP2.beta2" href="#library_TP2.beta2">beta2</a></code></li>
+<li><code><a title="library_TP2.calcul_beta" href="#library_TP2.calcul_beta">calcul_beta</a></code></li>
+<li><code><a title="library_TP2.calcul_model" href="#library_TP2.calcul_model">calcul_model</a></code></li>
+<li><code><a title="library_TP2.compare" href="#library_TP2.compare">compare</a></code></li>
+<li><code><a title="library_TP2.covariance" href="#library_TP2.covariance">covariance</a></code></li>
+<li><code><a title="library_TP2.eps_aleatoire" href="#library_TP2.eps_aleatoire">eps_aleatoire</a></code></li>
+<li><code><a title="library_TP2.esp_aleatoire_gaussian" href="#library_TP2.esp_aleatoire_gaussian">esp_aleatoire_gaussian</a></code></li>
+<li><code><a title="library_TP2.inliers" href="#library_TP2.inliers">inliers</a></code></li>
+<li><code><a title="library_TP2.mat_X_exo1" href="#library_TP2.mat_X_exo1">mat_X_exo1</a></code></li>
+<li><code><a title="library_TP2.mat_X_sin" href="#library_TP2.mat_X_sin">mat_X_sin</a></code></li>
+<li><code><a title="library_TP2.mat_Y_exo1" href="#library_TP2.mat_Y_exo1">mat_Y_exo1</a></code></li>
+<li><code><a title="library_TP2.model" href="#library_TP2.model">model</a></code></li>
+<li><code><a title="library_TP2.outliers" href="#library_TP2.outliers">outliers</a></code></li>
+<li><code><a title="library_TP2.traces" href="#library_TP2.traces">traces</a></code></li>
+<li><code><a title="library_TP2.variance" href="#library_TP2.variance">variance</a></code></li>
+<li><code><a title="library_TP2.y_exo1" href="#library_TP2.y_exo1">y_exo1</a></code></li>
+<li><code><a title="library_TP2.y_exo1_sin" href="#library_TP2.y_exo1_sin">y_exo1_sin</a></code></li>
+<li><code><a title="library_TP2.y_exo3" href="#library_TP2.y_exo3">y_exo3</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

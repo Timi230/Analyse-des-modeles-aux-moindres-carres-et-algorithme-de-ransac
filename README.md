@@ -30,6 +30,7 @@ L'objectif de cette étude est de simuler des modèles linéaires et non-linéai
     
  *Rapport du projet* :
  
+[Rapport_Filippone_Faivre_Millet_Pieussergues.pdf](https://github.com/Timi230/Projet_Ma324/blob/main/Rapport_Filippone_Faivre_Millet_Pieussergues.pdf)
 
 #
 
